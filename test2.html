@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.16/dist/sweetalert2.all.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.16/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    $(function(){
+      $('#contactForm').submit(function(event){
+        event.preventDefault(); // Prevent the form from submitting
+
+        var formData = $(this).serialize(); // Serialize form data
+
+        $.ajax({
+          url: 'test.php', // PHP script to handle form data
+          type: 'POST',
+          data: formData,
+          success: function(response) {
+            Swal.fire({
+              title: '<strong>HTML <u>example</u></strong>',
+              icon: 'info',
+              html: 'You can use <b>bold text</b>, <a href="//sweetalert2.github.io">links</a>, and other HTML tags',
+              showCloseButton: true,
+              showCancelButton: true,
+              focusConfirm: false,
+              confirmButtonText: '<i class="fa fa-thumbs-up"></i> Great!',
+              confirmButtonAriaLabel: 'Thumbs up, great!',
+              cancelButtonText: '<i class="fa fa-thumbs-down"></i>',
+              cancelButtonAriaLabel: 'Thumbs down'
+            });
+          },
+          error: function() {
+            Swal.fire('Error', 'Failed to send the email.', 'error');
+          }
+        });
+      });
+    });
+
+   
+    
+  </script>
+
+
+
+</body>
+</html>

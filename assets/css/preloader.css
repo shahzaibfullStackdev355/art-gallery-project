@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "diamondringbold";
+    src: url("/assets/webfonts/diamond-ring-hairline.otf");
+}
+
+@font-face {
+    font-family: "AvianoGothic";
+    src: url("/assets/webfonts/Aviano\ Gothic\ Regular.ttf");
+}
+
+
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    /* background-image: url("../images/black\ grad\ backgound.webp"); */
+    background-image: url("../images/Gadient\ Dark.webp");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 1000;
+
+}
+.text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    overflow: hidden;
+    color: white;
+    opacity: 0;
+    margin-top: -100px;
+}
+.text-container h1{
+    color: white;
+    font-family: "diamondring", sans-serif;
+    font-weight: normal;
+    font-size: 110px;
+    letter-spacing: 2.5px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* .preloader-span{
+    color: white;
+    font-family: "diamondring", sans-serif!important;
+    font-weight: normal;
+    font-size: 75px;
+} */
+
+
+.preloader-heading-1{
+    margin-bottom: 10px!important;
+}
+.preloader-heading-2{
+    font-family: "AvianoGothic", sans-serif!important;
+    margin-top: 10px!important;
+    font-size: 35px!important;
+}
+
+@media screen and (max-width: 746px) {
+    .text-container h1 {
+        font-size: 70px;
+        text-align: center;
+        margin-top: 30px;
+        padding-left: 15px;
+    }
+    .preloader-heading-2 {
+        font-family: "AvianoGothic", sans-serif!important;
+        margin-top: 10px!important;
+        font-size: 25px!important;
+    }
+}

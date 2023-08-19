@@ -1,0 +1,127 @@
+#btn{
+	background-color: white;
+	border: none;
+	padding: 10px 20px 10px 20px;
+    font-family: 'Poppins', sans-serif;
+	color: black;
+	margin: 0px;
+	border-radius: 5px;
+	font-size: 16px;
+    transition: 0.4s;
+}
+#btn:hover{
+	background-color: black;
+	color: white;
+	border: 2px solid white;
+    transition: 0.4s;
+}
+#ovrly{
+	background-color: #000;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	opacity: 0.7;
+    /* border: 3px solid red; */
+}
+#login{
+	background: #F2F2F2;
+	/* width: 30%; */
+    width: 40%;
+	margin: auto;
+	/* border: 3px solid #2ecc71; */
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	/* position: relative; */
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    /* margin-left: auto; 
+    margin-right: auto;  */
+	/* top: -310px; */
+    top: 80px;
+}
+#ovrly,#login{display: none;}
+#cross{
+	position: absolute;
+    left: 90%;
+    top: 0px;
+    color: black;
+	font-size: 23px;
+	border: 0;
+    padding: 12px;
+}
+h1{margin-top: 0px}
+/* form,input[type="button"]{margin:0 !important}
+.txt,.pswd{
+	background-color: #fff;
+	display: block;
+	border: 2px solid #2ecc71;
+	border-radius: 10px;
+	padding: 5px;
+	margin: auto;
+	margin-bottom: 15px
+} */
+
+
+/* .shop-form-ovly-mobileView{
+    display: none;
+} */
+
+/* .shop-buy-btn-mobileview{
+    display: none;
+} */
+.shop-buy-btn{
+   
+        background-color: black!important;
+        border: none;
+        padding: 10px 20px 10px 20px;
+        font-family: 'Poppins', sans-serif;
+        color: white!important;
+        margin: 0px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: 0.4s;
+}
+.shop-buy-btn:hover{
+        background-color: white!important;
+        color: black!important;
+        border: 2px solid black!important;
+        transition: 0.4s;
+    }
+
+
+@media screen and (max-width: 746px) {
+    #login {
+        width: 83%;
+    }
+   
+
+    #ovrly{
+        background-color: #000;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        opacity: 0.7;
+        /* border: 3px solid red; */
+    }
+    #cross {
+        left: 85%;
+    }
+    .form-input-shop {
+        width: 90%;
+    }
+    .form-message-shop {
+        width: 90%;
+    }
+    .shop-buy-btn-pcview{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    
+
+}
